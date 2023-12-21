@@ -1,0 +1,25 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline1",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/containerpower/blobs/testing.csv",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/33bbe112-6b0e-41a6-bdba-d843b783423d/resourceGroups/powerhouse/providers/Microsoft.Storage/storageAccounts/storagepowerhouse",
+			"events": [
+				"Microsoft.Storage.BlobCreated",
+				"Microsoft.Storage.BlobDeleted"
+			]
+		}
+	}
+}
