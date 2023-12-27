@@ -5,8 +5,19 @@
 			"referenceName": "RestService1",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"Quey": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": {
+				"value": "@dataset().Quey",
+				"type": "Expression"
+			}
+		},
 		"schema": []
 	}
 }
