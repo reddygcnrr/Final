@@ -16,7 +16,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"url": "https://reqres.in/api/users?page=2",
-					"method": "GET"
+					"method": "GET",
+					"authentication": {
+						"type": "Basic"
+					}
 				}
 			}
 		],
