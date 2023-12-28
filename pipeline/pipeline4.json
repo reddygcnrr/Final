@@ -36,6 +36,7 @@
 						"value": "@range(1,activity('Web1').output.total_pages)",
 						"type": "Expression"
 					},
+					"isSequential": true,
 					"activities": [
 						{
 							"name": "Copy data1",
@@ -76,94 +77,52 @@
 									"mappings": [
 										{
 											"source": {
-												"path": "$['page']"
+												"path": "['id']"
 											},
 											"sink": {
-												"name": "page"
+												"name": "id",
+												"type": "String"
 											}
 										},
 										{
 											"source": {
-												"path": "$['per_page']"
+												"path": "['email']"
 											},
 											"sink": {
-												"name": "per_page"
+												"name": "email",
+												"type": "String"
 											}
 										},
 										{
 											"source": {
-												"path": "$['total']"
+												"path": "['first_name']"
 											},
 											"sink": {
-												"name": "total"
+												"name": "first_name",
+												"type": "String"
 											}
 										},
 										{
 											"source": {
-												"path": "$['total_pages']"
+												"path": "['last_name']"
 											},
 											"sink": {
-												"name": "total_pages"
+												"name": "last_name",
+												"type": "String"
 											}
 										},
 										{
 											"source": {
-												"path": "$['data'][0]['id']"
+												"path": "['avatar']"
 											},
 											"sink": {
-												"name": "id"
-											}
-										},
-										{
-											"source": {
-												"path": "$['data'][0]['email']"
-											},
-											"sink": {
-												"name": "email"
-											}
-										},
-										{
-											"source": {
-												"path": "$['data'][0]['first_name']"
-											},
-											"sink": {
-												"name": "first_name"
-											}
-										},
-										{
-											"source": {
-												"path": "$['data'][0]['last_name']"
-											},
-											"sink": {
-												"name": "last_name"
-											}
-										},
-										{
-											"source": {
-												"path": "$['data'][0]['avatar']"
-											},
-											"sink": {
-												"name": "avatar"
-											}
-										},
-										{
-											"source": {
-												"path": "$['support']['url']"
-											},
-											"sink": {
-												"name": "url"
-											}
-										},
-										{
-											"source": {
-												"path": "$['support']['text']"
-											},
-											"sink": {
-												"name": "text"
+												"name": "avatar",
+												"type": "String"
 											}
 										}
 									],
-									"collectionReference": "$['data']"
+									"collectionReference": "$['data']",
+									"mapComplexValuesToString": true
 								}
 							},
 							"inputs": [
